@@ -13,6 +13,50 @@ For windows
  Install the core SQLMesh library with pip
 	pip install sqlmesh
 
-In this example, we specify the duckdb dialect: - this will create config-yaml file for further configuration.
+Set up a local DuckDB instance:
+- this will create config-yaml file for further configuration.
 
 	sqlmesh init duckdb
+
+Configure the ymal file to point to SQL database server
+
+Configuration (config.yaml)
+Here’s an example configuration file for MSSQL:
+
+-------------------With MS SQL authentication---------------------------------------
+gateways:
+  mssql_gateway:
+    connection:
+      type: mssql
+      host: your-mssql-server
+      user: your-username
+      password: your-password
+      database: your-database
+      port: 1433
+      autocommit: true
+
+default_gateway: mssql_gateway
+
+model_defaults:
+  dialect: mssql
+
+
+====================
+
+
+-----------------With Trusted Authentication
+gateways:
+  mssql_gateway:
+    connection:
+      type: mssql
+      host: your-mssql-server
+      database: your-database
+      port: 1433
+      trusted_connection: true
+
+default_gateway: mssql_gateway
+
+model_defaults:
+  dialect: mssql
+
+========================================
