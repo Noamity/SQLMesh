@@ -60,3 +60,23 @@ model_defaults:
   dialect: tsql
 
 ========================================
+
+
+-----  OR ------
+
+gateways:
+  mssql_gateway:
+    connection:
+      type: mssql
+      host: your-mssql-server
+      database: your-database
+      port: 1433
+      driver: ODBC Driver 17 for SQL Server
+      authentication: Windows
+
+default_gateway: mssql_gateway
+
+model_defaults:
+  dialect: mssql
+
+
