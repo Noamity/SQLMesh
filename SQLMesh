@@ -43,7 +43,7 @@ model_defaults:
 
 ====================
 
-
+<<<< SQLMesh DOES NOT SUPORT TRUSTED OR WINDOWS AUTHENTICATION
 -----------------With Trusted Authentication
 gateways:
   mssql_gateway:
