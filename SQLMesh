@@ -38,7 +38,7 @@ gateways:
 default_gateway: mssql_gateway
 
 model_defaults:
-  dialect: mssql
+  dialect: tsql
 
 
 ====================
@@ -57,6 +57,6 @@ gateways:
 default_gateway: mssql_gateway
 
 model_defaults:
-  dialect: mssql
+  dialect: tsql
 
 ========================================
